@@ -22,32 +22,23 @@ High-level view of how Snort fits into a detection and response workflow.
 ```mermaid
 flowchart LR
 
-A[Network Traffic]
---> B[Snort Sensor]
-
+A[Network Traffic] --> B[Snort Sensor]
 B --> C[Detection Rules]
-
 C --> D[Alert Generation]
-
 D --> E[SIEM / Log Store]
-
 E --> F[SOC Analyst]
-
 F --> G[Investigation]
-
 G --> H[Packet Analysis]
-
 H --> I[Incident Response]
-
 I --> J[Containment]
-
 J --> K[Recovery]
-
 K --> L[Lessons Learned]
-
-L --> M[Rule Tuning & Optimization]
-
+L --> M[Rule Tuning and Optimization]
 M --> C
+```
+
+> This architecture reflects a practical detection engineering lifecycle: **detect → analyze → respond → improve**.
+
 
 ## Why Use Snort?
 
