@@ -122,6 +122,12 @@ sudo ./scripts/install-snort-ubuntu.sh
 sudo ./scripts/test-rules.sh
 ```
 
+## Repository Notice
+
+This repository is maintained as a professional cybersecurity portfolio and research project focused on detection engineering, incident response, threat hunting, security automation, and AI security.
+Content is published for educational, technical, and professional reference purposes. This repository is not currently accepting community contributions, pull requests, issue submissions, or feature requests.
+All content is provided as-is and should be reviewed, tested, and validated before use in production environments.
+
 ## Disclaimer
 
 This repository is for defensive security education, detection engineering, and lab validation. Rules should be tested and tuned before production deployment.
