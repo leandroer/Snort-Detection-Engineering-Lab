@@ -15,6 +15,40 @@ This project is designed for security engineers, SOC analysts, detection enginee
 - Provide sample operational workflows for IDS, IPS, and packet analysis.
 - Help engineers move from “rule writing” to professional detection engineering.
 
+## Detection Engineering Architecture
+
+High-level view of how Snort fits into a detection and response workflow.
+
+```mermaid
+flowchart LR
+
+A[Network Traffic]
+--> B[Snort Sensor]
+
+B --> C[Detection Rules]
+
+C --> D[Alert Generation]
+
+D --> E[SIEM / Log Store]
+
+E --> F[SOC Analyst]
+
+F --> G[Investigation]
+
+G --> H[Packet Analysis]
+
+H --> I[Incident Response]
+
+I --> J[Containment]
+
+J --> K[Recovery]
+
+K --> L[Lessons Learned]
+
+L --> M[Rule Tuning & Optimization]
+
+M --> C
+
 ## Why Use Snort?
 
 Snort is a widely used open-source network intrusion detection and prevention engine. It can inspect network traffic, apply signature-based detection logic, generate alerts, and support packet-based investigations. Snort is valuable because it gives defenders visibility into network-layer behavior that endpoint, identity, or cloud logs may not fully capture.
