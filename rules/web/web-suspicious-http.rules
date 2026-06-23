@@ -1,0 +1,8 @@
+# Web suspicious HTTP rules
+# SID range: 1000100-1000199
+
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS (msg:"WEB suspicious SQL injection keyword in URI"; flow:to_server,established; http_uri; content:"union"; nocase; content:"select"; nocase; distance:0; within:80; sid:1000101; rev:1; classtype:web-application-attack; metadata:created_at 2026_06_23, attack_target server;)
+
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS (msg:"WEB suspicious path traversal attempt"; flow:to_server,established; http_uri; content:"../"; sid:1000102; rev:1; classtype:web-application-attack; metadata:created_at 2026_06_23, attack_target server;)
+
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS (msg:"WEB suspicious sqlmap user-agent"; flow:to_server,established; http_header; content:"User-Agent|3a|"; nocase; content:"sqlmap"; nocase; distance:0; within:120; sid:1000103; rev:1; classtype:web-application-attack; metadata:created_at 2026_06_23, tool sqlmap;)

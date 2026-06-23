@@ -1,0 +1,14 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets
+*.env
+*.key
+*.pem
+*.pfx
+
+# Sensitive packet captures
+pcaps/*.pcap
+pcaps/*.pcapng
+!pcaps/README.md

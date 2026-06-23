@@ -1,0 +1,7 @@
+# Local Snort rules for lab validation.
+include ../rules/local/local-lab.rules
+include ../rules/web/web-suspicious-http.rules
+include ../rules/malware/malware-c2.rules
+include ../rules/recon/recon-scanning.rules
+include ../rules/policy/policy-cleartext-credentials.rules
+include ../rules/ics/ics-modbus.rules
